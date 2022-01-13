@@ -2,7 +2,7 @@
 // @name Fire & Water Discord Theme
 // @author Biast12 (Tobias)#0001
 // @description Fire & Water Discord Theme By Biast12
-// @version 1.0.0
+// @version 1.0.2
 // @namespace https://twitter.com/Biast12
 // @license CC-BY-SA 4.0
 // @grant GM_addStyle
@@ -14,22 +14,6 @@
 
 (function() {
 let css = `
-
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-@import url("https://github.com/biast12/DiscordThemeViolentmonkey/CompactMemberList.css");
-@import url("https://github.com/biast12/DiscordThemeViolentmonkey/statusRounded.css");
-
-
-.membersGroup-v9BXpm span { color: #ff0000; }
-.markup-2BOw-j a { color: #39ff14; }
-.cozy-3raOZG .messageContent-2qWWxC { color: #ffffff; }
-#app-mount .wrapper-1ucjTd .content-3at_AU .icon-1_QxNX,
-#app-mount .wrapper-1ucjTd .content-3at_AU .name-3_Dsmg { color: #D2D2D2; }
-#app-mount .wrapper-1ucjTd.modeUnread-1zpFdA .content-3at_AU .icon-1_QxNX,
-#app-mount .wrapper-1ucjTd.modeUnread-1zpFdA .content-3at_AU .name-3_Dsmg { color: #ffffff; }
-#app-mount .wrapper-1ucjTd.modeMuted-3osy7j .content-3at_AU .icon-1_QxNX,
-#app-mount .wrapper-1ucjTd.modeMuted-3osy7j .content-3at_AU .name-3_Dsmg { color: #646464; }
-
 
 .appMount-3lHmkl {
     background-image: url(https://i.imgur.com/dNgF6kE.jpg);
@@ -47,6 +31,44 @@ let css = `
     background: center / cover no-repeat url(https://i.imgur.com/DbsnuBE.gif);
     border-radius: 50%;
 }
+
+/* Compact MemberList */
+.membersWrap-3NUR2t {
+  min-width: unset;
+}
+.membersWrap-3NUR2t .members-3WRCEx {
+  max-width: 65px;
+  min-width: 65px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.membersWrap-3NUR2t .members-3WRCEx:hover {
+  max-width: 240px;
+  min-width: 240px;
+}
+.membersWrap-3NUR2t .members-3WRCEx .content-2a4AW9:not(:hover) {
+  padding-top: 10px;
+  background-color: #transparent;
+}
+
+.membersGroup-2eiWxl {
+	height: 30px;
+  bottom: 10px;
+  padding: 8px 8px 0 16px;
+}
+
+.container-q97qHp {
+  color: #FF0000;
+	font-size: 14px;
+  text-align: center;
+  border-bottom: 2px solid #FF0000;
+  border-radius: 25px;
+}
+
+.members-3WRCEx, .members-3WRCEx > div {
+  background-color: #000;
+}
+/* End Compact MemberList */
 
 .messagesWrapper-RpOMA3, .scrollerContent-2SW0kQ {
     bottom: -20px;
@@ -190,19 +212,12 @@ let css = `
     background-color: transparent;
 }
 
-.container-q97qHp {
-    color: #FF0000;
-	font-size: 14px;
-	top
-}
-
-.membersGroup-2eiWxl {
-	padding: 14px 8px 0 16px;
-	height: 30px;
-}
-
 .body-1Ukv50, .topSection-13QKHs {
     background-color: #000b1e;
+}
+
+.jumpToPresentBar-1cEnH0 {
+    bottom: 13px;
 }
 
 /* Home Icon */
