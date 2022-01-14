@@ -45,6 +45,7 @@ let css = `
 .membersWrap-3NUR2t .members-3WRCEx:hover {
   max-width: 240px;
   min-width: 240px;
+  color: #transparent;
 }
 .membersWrap-3NUR2t .members-3WRCEx .content-2a4AW9:not(:hover) {
   padding-top: 10px;
@@ -62,7 +63,9 @@ let css = `
 	font-size: 14px;
   text-align: center;
   border-bottom: 2px solid #FF0000;
-  border-radius: 25px;
+  border-bottom-left-radius: 20px 7px;
+  border-bottom-right-radius: 20px 7px;
+  padding-bottom: 4px;
 }
 
 .members-3WRCEx, .members-3WRCEx > div {
@@ -177,9 +180,9 @@ let css = `
     --scrollbar-auto-track: #000b1e;
     --scrollbar-auto-scrollbar-color-thumb: #FF0000;
     --scrollbar-auto-scrollbar-color-track: #000b1e;
-	--channels-default: #8e9297;
-	--themeColor1: #ff0000;
-	--themeColor2: rgba(255, 0, 0, 0.1);
+    --channels-default: #8e9297;
+    --themeColor1: #ff0000;
+    --themeColor2: rgba(255, 0, 0, 0.1);
 }
 
 /* Transparency */
