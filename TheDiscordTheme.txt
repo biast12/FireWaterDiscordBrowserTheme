@@ -116,6 +116,38 @@ let css = `
     border: 3px solid #000b1e;
 }
 
+.unreadPill-3nEWYM {
+    color: #FF0000;
+    background-color: #091833;
+}
+.unreadPillCapStroke-1nE1Q8 {
+    fill: #091833;
+}
+
+.theme-dark .header-145e10 .tabBar-1qdMr5 .tab-TRrPC8.active-1grPyy {
+    background-color: transparent;
+}
+
+.theme-dark .list-1uSVgu .tabBar-3N44FC .tab-1tp4jL.active-3WMEyE {
+    background-color: transparent;
+}
+
+.theme-dark .root-g14mjS{
+    background-color: #091833;
+}
+
+.theme-dark .footer-31IekZ {
+    background-color: #091833;
+}
+
+.selected-29KTGM .icon-2xnN2Y {
+    color: var(--interactive-normal);
+}
+
+.perkDescription-3e1T_w {
+    color:var(--text-normal);
+}
+
 /* Custom CSS goes here */
   
 /* Main Index 
