@@ -4,6 +4,9 @@
 // @description Fire & Water Discord Theme By Biast12
 // @version 1.0.2
 // @namespace https://twitter.com/Biast12
+// @supportURL https://github.com/biast12/DiscordThemeViolentmonkey
+// @updateURL https://github.com/biast12/DiscordThemeViolentmonkey
+// @contributionURL https://Paypal.me/Biast12
 // @license CC-BY-SA 4.0
 // @grant GM_addStyle
 // @run-at document-start
@@ -24,6 +27,7 @@ let css = `
 
 }
 
+/* Icon */
 [class^=homeIcon] {
     display: none;
 }
@@ -32,32 +36,42 @@ let css = `
     border-radius: 50%;
 }
 
+/* Icon end */
+
 /* Compact MemberList */
-.membersWrap-3NUR2t {
-  min-width: unset;
+.members-3WRCEx, .membersWrap-3NUR2t, .searchResultsWrap-5RVOkx {
+  border-radius: 0 0 0 0 !important;
+  width: 64px;
+  min-width: 64px;
+  transition-property: width, min-width;
+  transition-duration: 0.8s;
 }
-.membersWrap-3NUR2t .members-3WRCEx {
-  max-width: 65px;
-  min-width: 65px;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-}
-.membersWrap-3NUR2t .members-3WRCEx:hover {
-  max-width: 240px;
+.members-3WRCEx:hover, .membersWrap-3NUR2t:hover {
+  width: 240px;
   min-width: 240px;
-  color: #transparent;
 }
-.membersWrap-3NUR2t .members-3WRCEx .content-2a4AW9:not(:hover) {
-  padding-top: 10px;
-  background-color: #transparent;
+.searchResultsWrap-5RVOkx:hover {
+  width: 418px;
+  min-width: 418px;
 }
-
-.membersGroup-2eiWxl {
-	height: 30px;
-  bottom: 10px;
-  padding: 8px 8px 0 16px;
+.searchResultGroup-1lU_-i {
+  width: 394px;
 }
-
+.membersWrap-3NUR2t, .searchResultsWrap-5RVOkx {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  box-shadow: none;
+  background-color: #000b1e;
+}
+.chatContent-3KubbW {
+  min-width: calc(100% - 64px);
+  max-width: calc(100% - 64px);
+}
+.chatContent-3KubbW[aria-label=" (channel)"] {
+  min-width: 100%;
+  max-width: 100%;
+}
 .container-q97qHp {
   color: #FF0000;
 	font-size: 14px;
@@ -67,11 +81,13 @@ let css = `
   border-bottom-right-radius: 20px 7px;
   padding-bottom: 4px;
 }
-
 .members-3WRCEx, .members-3WRCEx > div {
-  background-color: #000;
+  background-color: rgba(0, 11, 30, .1) !important;
 }
-/* End Compact MemberList */
+.membersGroup-2eiWxl {
+  padding: 20px 8px 0 16px;
+}
+/* Compact MemberList end */
 
 .messagesWrapper-RpOMA3, .scrollerContent-2SW0kQ {
     bottom: -20px;
@@ -80,6 +96,7 @@ let css = `
 
 .scrollableContainer-15eg7h {
     background-color: #133e7c;
+    box-shadow: 0px 0px 3px 1px #FF0000;
 }
 
 .group-spacing-16 .divider-IqmEqJ.hasContent-1y12-u {
@@ -87,7 +104,8 @@ let css = `
 }
 
 .divider-2rZFJK {
-    border-top: thin solid rgba(255, 0, 0, 0.6);
+    border-top: 2px solid rgba(255, 0, 0, 0.6);
+    border-radius: 25%;
 }
 
 .content-3spvdd {
@@ -2179,6 +2197,185 @@ div.item-3HknzM:nth-child(5):hover {
 .theme-dark .outer-1AjyKL.active-1xchHY, .theme-dark .outer-1AjyKL.interactive-3B9GmY:hover {
     background-color: rgba(9, 24, 51, .4)
 }
+
+
+
+/* Fun things */
+
+/* Pings are ANIMATED!! */
+.numberBadge-37OJ3S {
+  animation: animatedPing 1.3s infinite ease-in-out;
+}
+@keyframes animatedPing {
+   0% {
+     transform: rotate(-12deg); 
+    }
+   50% {
+     transform: rotate(12deg) scale(1.2); 
+    }
+   100% {
+     transform: rotate(-10deg);   
+    }
+}
+
+/* User settings popout */
+.panels-3wFtMD > .container-YkUktl .flex-2S1XBF > :not(:last-child) {
+    opacity: 0% !important;
+    width: 0px;
+    transition: all 0.2s ease-in-out;
+}
+
+.panels-3wFtMD > .container-YkUktl:hover .flex-2S1XBF > :not(:last-child) {
+    opacity: 100% !important;
+    width: 32px;
+}
+
+/* Widescreen Settings */
+.sidebarRegion-1VBisG, .sidebarRegionScroller-FXiQOh {
+    justify-content: unset;
+    flex: unset
+}
+.contentColumn-1C7as6, .customColumn-2n-oKU, .hero-1aNo0v {
+    max-width: unset;
+}
+.accountProfileCard-lbN7n- {
+    max-width: 750px;
+}
+.notificationSettings-1U0JsJ {
+    max-width: 45%;
+}
+
+/* Blur spoiler text instead hiding it */
+.spoilerText-27bIiA,
+.spoilerText-27bIiA.hidden-3B-Rum {
+    background-color: transparent !important;
+}
+
+.spoilerText-27bIiA.hidden-3B-Rum > .inlineContent-2YnoDy {
+    opacity: 1 !important;
+    filter: blur(3px);
+    pointer-events: unset;
+}
+
+
+/* Revert Discord Greeting System Messages */
+.welcomeCTAButtonOuter-2VwxSF {display : none}
+
+
+/* Replace Wandering Cubes Spinner with gif*/
+span[class="inner-rBP-MS"]:after {
+    background-image: url('https://smashinghub.com/wp-content/uploads/2014/08/cool-loading-animated-gif-3.gif');
+    background-size: cover;
+    display: inline-block;
+    width: 32px; 
+    height: 32px;
+    content:"";
+}
+span[class="inner-rBP-MS"] > *{
+    display: none;
+}
+
+/* Status Picker */
+#status-picker>.scroller-1bVxF5 {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2px;
+}
+#status-picker-custom-status,
+#status-picker #status-picker-custom-status+.separator-1So4YB+div {flex: 1 1 100%;}
+#status-picker-online,
+#status-picker-idle,
+#status-picker-dnd,
+#status-picker-invisible {
+  flex: 1 1 calc(25% - 2px);
+  display: flex;
+  justify-content: center;
+  height: 40px;
+}
+#status-picker-online .statusItem-2hiCNB,
+#status-picker-idle .statusItem-2hiCNB,
+#status-picker-dnd .statusItem-2hiCNB,
+#status-picker-invisible .statusItem-2hiCNB {
+  width: fit-content;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+}
+#status-picker .item-1OdjEX:not(#status-picker-custom-status, #status-picker-switch-account) .status-3TYC5W {display: none;}
+#status-picker .description-3Cwkxk {display: none;}
+#status-picker .separator-1So4YB {display: none;}
+.statusItem-2hiCNB {column-gap: 5px;}
+#status-picker .mask-2Me5HY {
+ height: 50%;
+ width: auto;
+}
+#status-picker{
+    position:relative;
+    left:-8px;
+}
+
+
+/* Profile Connection Borders */
+.connectedAccountIcon-2vls0t ~ div::before {
+    content: "";
+    top: 0; bottom: 0; left: 0; right: 0;
+    border: 1px solid var(--border-color);
+    position: absolute;
+    display: block;
+    pointer-events: none;
+}
+
+.connectedAccount-1xKpli {
+    overflow: hidden;
+    position: relative;
+}
+/* Spotify */
+.connectedAccountIcon-2vls0t[src="/assets/eaeac24163b35f7526704a3d9b3c7722.svg"] ~ div::before {--border-color: #1ED760;}
+/* Github */
+.connectedAccountIcon-2vls0t[src="/assets/6a853b4c87fce386cbfef4a2efbacb09.svg"] ~ div::before {--border-color: #fff;}
+/* Twitch */
+.connectedAccountIcon-2vls0t[src="/assets/ca71e0b8818221eea1deebbaf8dc6518.svg"] ~ div::before {--border-color: #563194;}
+/* Twitter */
+.connectedAccountIcon-2vls0t[src="/assets/85cf2b49d2a185c98ec8e383ad5a05d6.svg"] ~ div::before {--border-color: #0099E4;}
+/* XBOX */
+.connectedAccountIcon-2vls0t[src="/assets/1fa6585cbb8c0fe21188e26d19fc6609.svg"] ~ div::before {--border-color: #5EC220;}
+/* Reddit */
+.connectedAccountIcon-2vls0t[src="/assets/f3224f560c8f5974355596a4f7e9ce19.svg"] ~ div::before {--border-color: #FF4500;}
+/* Battle.net */
+.connectedAccountIcon-2vls0t[src="/assets/37f15a06d062bdd0fc252d2b35d0b0bb.svg"] ~ div::before {--border-color: #0099E4;}
+/* Steam */
+.connectedAccountIcon-2vls0t[src="/assets/d897626dfa2016ea3ad0af935acb6070.svg"] ~ div::before {--border-color: #000000;}
+/* YouTube */
+.connectedAccountIcon-2vls0t[src="/assets/57ee9535485efae7eb923ed4893abb57.svg"] ~ div::before {--border-color: #D9252A;}
+/* Facebook */
+.connectedAccountIcon-2vls0t[src="/assets/32045743cb7670855ae726743c949e0c.svg"] ~ div::before {--border-color: #1877F2;}
+/* LOL */
+.connectedAccountIcon-2vls0t[src="/assets/94dc6f30a819026fa295d85f1f72b4ab.svg"] ~ div::before {--border-color: #CEA146;}
+
+
+
+/* Rainbow User ID */
+.subtext-2HDqJ7,
+.customStatus-1UAQAK,
+.hovered-20u3oh,
+.title-338goq {
+    background-image: linear-gradient(to left,rgb(51, 255, 0), rgb(255, 230, 0), red, rgb(234, 0, 255), rgb(0, 140, 255), rgb(51, 255, 0));
+    animation: gradient-border 4s linear infinite;
+    background-size: 400% 100%;
+    color: transparent !important;
+    -webkit-background-clip: text;
+    z-index: 1;
+    font-size: 17px;
+}
+@keyframes gradient-border {
+from {
+  background-position: 0 0;
+}
+to {
+  background-position: 100% 0;
+}
+}
+
 `;
 if (typeof GM_addStyle !== "undefined") {
   GM_addStyle(css);
