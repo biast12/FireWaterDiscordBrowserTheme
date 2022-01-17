@@ -105,6 +105,10 @@ let css = `
 }
 /* Server Ping end */
 
+.unread-2wipsx {
+    background-color: #000b1e;
+}
+
 .markup-eYLPri {
     color: #dcddde;
 }
