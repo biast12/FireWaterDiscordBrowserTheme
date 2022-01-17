@@ -89,6 +89,22 @@ let css = `
 }
 /* Compact MemberList end */
 
+.addFriendInputWrapper-kkoSV9 {
+    border: 1px solid #FF0000;
+}
+
+/* Server Ping */
+.mention-3XBnnZ {
+    background-color: #000b1e;
+    border: 1px solid #FF0000;
+}
+
+.bar-2eAyLE {
+    color: #FF0000;
+    font-size: 15px;
+}
+/* Server Ping end */
+
 .markup-eYLPri {
     color: #dcddde;
 }
@@ -257,6 +273,7 @@ let css = `
 .theme-dark .container-2McqkF {
   -webkit-box-shadow: var(--elevation-high);
   box-shadow: var(--elevation-high);
+  margin-right: 65px;
 }
 .theme-dark .elevationBorderHigh-3drnJX {
   box-shadow: none;
@@ -271,19 +288,28 @@ let css = `
 .theme-dark .searchOption-351dTI .filter-5YbOzJ {
   color: var(--interactive-normal);
 }
-.header-3A13BX {
+#SEARCH_OPTIONS-header {
   color: #ff0000;
+  font-size: 15px;
+}
+#HISTORY-header {
+  color: #ff0000;
+  font-size: 15px;
 }
 /* search menu end */
 
+.nameTag-sc-gpq {
+    margin-right: 0;
+}
+
 .theme-dark .lookFilled-yCfaCM.colorGrey-2iAG-B {
-  color: #ff0000;
-  background-color: #091833;
-  font-size: 17px;
+    color: #ff0000;
+    background-color: #091833;
+    font-size: 17px;
 }
 
 .size16-rrJ6ag {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 .members-3WRCEx, .members-3WRCEx>div {
