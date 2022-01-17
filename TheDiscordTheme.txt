@@ -18,13 +18,16 @@
 (function() {
 let css = `
 
+/* Radial Status */
+@import url('https://discordstyles.github.io/RadialStatus/dist/RadialStatus.css');
+
+
 .appMount-2yBXZl {
     background-image: url(https://i.imgur.com/dNgF6kE.jpg);
     background-color: #0d0d0d;
     background-repeat: no-repeat;
     background-position: center; 
     background-size: cover;
-
 }
 
 /* Icon */
@@ -261,6 +264,22 @@ let css = `
     --channels-default: #8e9297;
     --themeColor1: #ff0000;
     --themeColor2: rgba(255, 0, 0, 0.1);
+    
+    /* Radial Status */
+    --rs-small-spacing: 0px;
+    --rs-medium-spacing: 0px;
+    --rs-large-spacing: 0px;
+    --rs-small-width: 2px;
+    --rs-medium-width: 5px;
+    --rs-large-width: 8px;
+    --rs-avatar-shape: 50%;
+    --rs-online-color: #43b581;
+    --rs-idle-color: #faa61a;
+    --rs-dnd-color: #f04747;
+    --rs-offline-color: #636b75;
+    --rs-streaming-color: #643da7;
+    --rs-invisible-color: #747f8d;
+    --rs-phone-visible: block;
 }
 
 /* Transparency */
@@ -339,6 +358,7 @@ let css = `
 
 .jumpToPresentBar-1cEnH0 {
     bottom: 13px;
+    right: 20px;
 }
 
 
@@ -389,6 +409,7 @@ let css = `
     opacity: 100% !important;
     width: 32px;
 }
+
 
 /* Widescreen Settings */
 .sidebarRegion-1VBisG, .sidebarRegionScroller-FXiQOh {
@@ -511,7 +532,6 @@ span[class="inner-rBP-MS"] > *{
 .connectedAccountIcon-2vls0t[src="/assets/32045743cb7670855ae726743c949e0c.svg"] ~ div::before {--border-color: #1877F2;}
 /* LOL */
 .connectedAccountIcon-2vls0t[src="/assets/94dc6f30a819026fa295d85f1f72b4ab.svg"] ~ div::before {--border-color: #CEA146;}
-
 
 
 /* Rainbow User ID */
