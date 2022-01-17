@@ -2,10 +2,10 @@
 // @name Fire & Water Discord Theme
 // @author Biast12 (Tobias)#0001
 // @description Fire & Water Discord Theme By Biast12
-// @version 1.0.2
+// @version 1.0.3
 // @namespace https://twitter.com/Biast12
-// @supportURL https://github.com/biast12/DiscordThemeViolentmonkey
-// @updateURL https://github.com/biast12/DiscordThemeViolentmonkey
+// @supportURL https://github.com/biast12/FireWaterDiscordBrowserTheme
+// @updateURL https://github.com/biast12/FireWaterDiscordBrowserTheme
 // @contributionURL https://Paypal.me/Biast12
 // @license CC-BY-SA 4.0
 // @grant GM_addStyle
