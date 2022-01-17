@@ -316,10 +316,6 @@ let css = `
     font-size: 20px;
 }
 
-.members-3WRCEx, .members-3WRCEx>div {
-    background-color: transparent;
-}
-
 .form-3gdLxP {
 	margin-top: 0;
   padding-right: 20PX;
